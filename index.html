@@ -1,0 +1,812 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>sunkar.kz</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#3498db">
+    <!-- Icons -->
+    
+    <link rel="icon" type="img/png" sizes="32x32" href="includes/assets/img/logotype.png">
+    <link rel="icon" type="img/png" sizes="16x16" href="includes/assets/img/logotype.png">
+    <link rel="favicon" type="img/png" sizes="16x16" href="includes/assets/img/logotype.png">
+    <!-- Bootstrap core CSS -->
+    <link href="includes/assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="includes/assets/css/bootstrap-width.css" rel="stylesheet">
+    <!-- Fort Awesome CSS -->
+    <link href="includes/assets/css/font-awesome.min.css" rel="stylesheet">
+    <!-- Main CSS -->
+    <link href="includes/assets/css/icofont.min.css" rel="stylesheet">
+    <link href="includes/assets/css/remixicon.css" rel="stylesheet">
+    <link href="includes/assets/css/owl.carousel.min.css" rel="stylesheet">
+    <link href="includes/assets/css/venobox.css" rel="stylesheet">
+    <link href="includes/assets/css/aos.min.css" rel="stylesheet">
+    <link href="includes/assets/css/styles.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+    <!-- FontAwesome CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://use.fontawesome.com/647f067105.js"></script>
+    <script src="jquery.min.js"></script>
+    <!-- Подключаем скрипт для Owl Carousel -->
+   
+    <!-- jQuery -->
+    <script src="includes/assets/css/owl.carousel.min.css"></script>
+    <!-- Owl Carousel JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+    
+    <style>
+        .form-control {
+            border-radius: 20px;
+        }
+        /*footer {
+            background: #f3f9fd !important;
+        }*/
+        
+        .submenu {
+            display: none;
+            position: absolute;
+            background-color: #fff;
+            box-shadow: 0px 8px 16px rgba(0,0,0,0.1);
+            z-index: 1;
+        }
+        
+        .nav-item:hover .submenu {
+            display: block;
+        }
+        
+        .submenu a {
+            color: #333;
+            padding: 12px;
+            text-decoration: none;
+            display: block;
+        }
+        
+        .submenu a:hover {
+            background-color: #f1f1f1;
+        }
+        #welcome h1 {
+            margin: 0 0 15px 0;
+            font-size: 36px;
+            font-weight: 700;
+            line-height: 56px;
+            color: #3498db;
+        }
+        #welcome h2 {
+            color: black;
+            margin: 0 0 15px 0;
+            font-size: 36px;
+            font-weight: 700;
+            line-height: 56px;
+        }.certificates, .partners {
+            padding: 40px 0;
+            text-align: center;
+        }
+
+        .certificates .section-title, .partners .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .certificates-carousel, .partners-carousel {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .certificate-item, .partner-item {
+            margin: 10px;
+            border: 5px solid #3498db; /* Серый цвет рамки */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Объемный эффект */
+            border-radius: 10px; /* Закругленные углы */
+            overflow: hidden;
+            width: 200px; /* Ширина элемента */
+        }
+
+        .certificate-img, .partner-img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .partner-img {
+            width: 200px; /* Устанавливаем фиксированную ширину */
+            height: 100px; /* Устанавливаем фиксированную высоту */
+            object-fit: contain; /* Логотипы сохраняют свои пропорции */
+        }
+
+        .owl-nav {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .owl-nav button {
+            background-color: #007bff; /* Синий цвет фона */
+            border: none;
+            border-radius: 50%;
+            color: #fff;
+            cursor: pointer;
+            font-size: 18px;
+            height: 40px;
+            width: 40px;
+            margin: 0 5px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Объемный эффект */
+        }
+
+        .owl-nav button.owl-prev::before, .owl-nav button.owl-next::before {
+            content: none !important; /* Убираем маленькие стрелки */
+        }
+
+        .owl-nav button.owl-prev::after, .owl-nav button.owl-next::after {
+            font-family: 'FontAwesome' !important;
+            font-size: 24px !important;
+            color: #3498db !important; /* цвет стрелок */
+        }
+
+        .owl-nav button.owl-prev::after {
+            content: '\f053' !important; /* Иконка стрелки влево из FontAwesome */
+        }
+
+        .owl-nav button.owl-next::after {
+            content: '\f054' !important; /* Иконка стрелки вправо из FontAwesome */
+        }
+        .owl-nav button.owl-prev::before, .owl-nav button.owl-next::before {
+         content: none !important;
+        }
+        .owl-nav button.owl-prev::before, .owl-nav button.owl-next::before {
+            color: white !important; /* Меняем цвет стрелок на белый */
+        }
+        .owl-carousel .owl-nav button.owl-prev::before, .owl-carousel .owl-nav button.owl-next::before {
+    color: white !important;
+}
+
+
+
+    
+    
+
+
+    </style>
+    
+</head>
+<body>
+    <header id="header" class="fixed-top align-items-center">
+        <nav class="navbar sticky-top bg-white">
+            <div class="container container-fluid" style="height: 40px;">
+                <h1 class="navbar-brand logo" style="font-size: 20px;line-height: 20px;">
+                    <img src="includes/assets/img/logotype.png" class="me-2" width="40">
+                    <a href="/" class="">sunkar.kz</a>
+                </h1>
+                <nav class="nav-menu d-none d-lg-block d-flex">
+                    <ul>
+                        <li class="nav-item"><a href="/">Главная</a></li>
+                        <li class="nav-item">
+                            <a href="about.html">О компании</a>
+                            <ul class="submenu">
+                                <li><a href="certif.html">Сертификаты</a>
+                                    <a href="partners.html">Партнеры</a>
+                                    <a href="ruk.html">Руководство</a>
+                                    <a href="vakan.html">Вакансии</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item"><a href="news.html">Новости</a></li>
+                        <li class="nav-item"><a href="uslugi.html">Услуги</a>
+                            <ul class="submenu">
+                                <li><a href="bussines.html">ГОСТЕСТ</a>
+                                    <a href="goszakup.html">Организация и проведения государственных закупов</a>
+                                    <a href="video.html">Установка и обслуживание систем видеонаблюдения и пожарной системы</a>
+                                    <a href="ohrana.html">Охранное агентство</a>
+                                    <a href="uchebny.html">Учебный центр</a>
+                                    <a href="shvei.html">Ателье</a>
+                                    <a href="tvorchesky.html">Детский творческий центр</a>
+                                    <a href="programma.html">Поставка оборудования и лицензионного программного обеспечения</a>
+                                    <a href="local.html">Установка локальной сети</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item"><a href="contact.html">Контакты</a></li>
+                        <li class="get-started"><a href="tel:+77054004433">Позвонить</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <!-- Ваш контент -->
+    </div>
+    <main id="main">
+        <section id="welcome" class="d-flex align-items-center">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 pt-5 pt-lg-0 order-2 order-lg-1 d-flex flex-column justify-content-center item">
+                        <h1 data-aos="fade-up" class="mb-1">Sunkar Inter Link - </h1>
+                        <h2 data-aos="fade-up" class="mb-1">предлагает цифровые инструменты, которые помогут вам эффективно достигать ваших целей.</h1>
+                        <div data-aos="fade-up" data-aos-delay="800">
+                            <a href="#" class="btn-welcome scrollto">Узнать больше</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 order-1 order-lg-2 welcome-img item" data-aos="fade-left" data-aos-delay="200">
+                        <img src="includes/assets/img/logotype.png" class="img-fluid animated" alt="" width="350" data-aos="fade-left" data-aos-delay="200">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="counts" class="counts">
+            <div class="container">
+        
+                <div class="row">
+                    <div class="image col-xl-5 d-flex align-items-stretch justify-content-center justify-content-xl-start" data-aos="fade-right" data-aos-delay="150">
+                        <img src="{TEMPLATE}img/counts-img.svg" alt="" class="img-fluid">
+                    </div>
+        
+                    <div class="col-xl-7 d-flex align-items-stretch pt-4 pt-xl-0" data-aos="fade-left" data-aos-delay="300">
+                        <div class="content d-flex flex-column justify-content-center">
+                            <div class="row">
+                                <div class="col-md-6 d-md-flex align-items-md-stretch">
+                                    <div class="count-box">
+                                        <i class="icofont-simple-smile"></i>
+                                        <span data-toggle="counter-up">40</span>
+                                        <p><strong>Клиенты</strong> - Мы гордимся доверием наших клиентов, которые ценят наш профессионализм и качество предоставляемых услуг.</p>
+                                    </div>
+                                </div>
+        
+                                <div class="col-md-6 d-md-flex align-items-md-stretch">
+                                    <div class="count-box">
+                                        <i class="icofont-document-folder"></i>
+                                        <span data-toggle="counter-up">5000</span>
+                                        <p><strong>Проекты</strong> - Успешно завершённые проекты демонстрируют наш опыт и способность решать сложные задачи.</p>
+                                    </div>
+                                </div>
+        
+                                <div class="col-md-6 d-md-flex align-items-md-stretch">
+                                    <div class="count-box">
+                                        <i class="icofont-clock-time"></i>
+                                        <span data-toggle="counter-up">7</span>
+                                        <p><strong>Годы опыта</strong> - Наш многолетний опыт работы позволяет нам предлагать оптимальные решения для наших клиентов.</p>
+                                    </div>
+                                </div>
+        
+                                <div class="col-md-6 d-md-flex align-items-md-stretch">
+                                    <div class="count-box">
+                                        <i class="icofont-award"></i>
+                                        <span data-toggle="counter-up">25000</span>
+                                        <p><strong>Оборудования</strong> - Мы установили более 25 000 единиц оборудования, гарантируя их надёжную и стабильную работу.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        
+            </div>
+        </section>
+        
+
+       
+
+        <script>
+            $(document).ready(function(){
+                $(".owl-carousel").owlCarousel({
+                    // Ваши настройки Owl Carousel
+                    items: 1,
+                    loop: true,
+                    margin: 10,
+                    nav: true,
+                    dots: true
+                });
+            });
+        </script>
+        
+        
+        <section id="certificates" class="certificates">
+            <div class="container">
+                <div class="section-title" data-aos="fade-up">
+                    <h2>Наши Сертификаты</h2>
+                </div>
+        
+                <div class="owl-carousel certificates-carousel" data-aos="fade-up" data-aos-delay="200">
+                    <div class="certificate-item">
+                        <img src="img/rec/IMG_3045.HEIC" class="certificate-img" alt="Certificate 1">
+                    </div>
+                    <div class="certificate-item">
+                        <img src="img/rec/IMG_3052.jpg" class="certificate-img" alt="Certificate 2">
+                    </div>
+                    <div class="certificate-item">
+                        <img src="img/rec/IMG_3048.HEIC" class="certificate-img" alt="Certificate 3">
+                    </div>
+                    <div class="certificate-item">
+                        <img src="img/rec/IMG_3049.HEIC" class="certificate-img" alt="Certificate 4">
+                    </div>
+                    <div class="certificate-item">
+                        <img src="img/rec/IMG_3050.HEIC" class="certificate-img" alt="Certificate 5">
+                    </div>
+                    <div class="certificate-item">
+                        <img src="img/rec/IMG_3051.HEIC" class="certificate-img" alt="Certificate 6">
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- jQuery -->
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <!-- Owl Carousel JS -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+        
+        <script>
+            $(document).ready(function(){
+                $('.certificates-carousel').owlCarousel({
+                    loop: true,
+                    margin: 10,
+                    nav: true,
+                    responsive: {
+                        0: {
+                            items: 1
+                        },
+                        600: {
+                            items: 2
+                        },
+                        1000: {
+                            items: 4
+                        }
+                    }
+                });
+            });
+        </script>
+        
+
+            <section id="team" class="team section-bg">
+            <div class="container">
+
+            <div class="section-title" data-aos="fade-up">
+            <h2>Руководство</h2>
+            </div>
+
+            <div class="row">
+
+            <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+            <div class="member" data-aos="fade-up" data-aos-delay="100">
+            <div class="member-img">
+            <img src="includes/assets/img/logotype.png" class="img-fluid" alt="">
+            <div class="social">
+            <a href=""><i class="icofont-twitter"></i></a>
+            <a href=""><i class="icofont-facebook"></i></a>
+            <a href=""><i class="icofont-instagram"></i></a>
+            <a href=""><i class="icofont-linkedin"></i></a>
+            </div>
+            </div>
+            <div class="member-info">
+            <h4>Ахметжанов Дастан Рустемович</h4>
+            <span>Директор ТОО "Сункар Inter Link"</span>
+            </div>
+            </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+            <div class="member" data-aos="fade-up" data-aos-delay="200">
+            <div class="member-img">
+            <img src="includes/assets/img/logotype.png" class="img-fluid" alt="">
+            <div class="social">
+            <a href=""><i class="icofont-twitter"></i></a>
+            <a href=""><i class="icofont-facebook"></i></a>
+            <a href=""><i class="icofont-instagram"></i></a>
+            <a href=""><i class="icofont-linkedin"></i></a>
+            </div>
+            </div>
+            <div class="member-info">
+            <h4>Апенова Айтжамал Михайловна</h4>
+            <span>Руководитель "Сункар Учебный центр"</span>
+            </div>
+            </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+            <div class="member" data-aos="fade-up" data-aos-delay="300">
+            <div class="member-img">
+            <img src="includes/assets/img/logotype.png" class="img-fluid" alt="">
+            <div class="social">
+            <a href=""><i class="icofont-twitter"></i></a>
+            <a href=""><i class="icofont-facebook"></i></a>
+            <a href=""><i class="icofont-instagram"></i></a>
+            <a href=""><i class="icofont-linkedin"></i></a>
+            </div>
+            </div>
+            <div class="member-info">
+            <h4>Ахметкалиева Динара Абдрахмановна</h4>
+            <span>Руководитель "Сункар Детский творческий центр"</span>
+            </div>
+            </div>
+            </div>
+            
+            </div>
+
+            </div>
+            </section>
+
+        <section id="services" class="services">
+                <div class="container">
+                    <div class="section-title" data-aos="fade-up">
+                        <h2>Наши Услуги</h2>
+                        <p class="lead text-justify"></p>
+                        <p class="fw-bold fs-5 text-center"></p>
+                    </div>
+                    <!--<div class="row justify-content-center">-->
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 align-items-stretch">
+	    <div class="d-flex align-items-stretch mb-4 mb-lg-4">
+        <a href="bussines.html" class="icon-box text-dark" data-aos="fade-up" data-aos-delay="100">
+        <img src="uploads/shortcuts/3/buss.jpg" class="services-item-image rounded-5" style="width:100px; height:100px; margin-bottom:20px;">
+        <h4 class="title mt-2">ГОСТЕСТ</h4>
+        <div class="text-muted mt-2">Центр по подготовке к тестам на государственную службу! Не теряй свое время, приходи в Сункар и получи качественное образование.
+            Подготовка сотрудников органов внутренних дел к тестам на аттестацию.</div>
+        </a>
+        </div><div class="d-flex align-items-stretch mb-4 mb-lg-4">
+        <a href="goszakup.html" class="icon-box text-dark" data-aos="fade-up" data-aos-delay="100">
+        <img src="uploads/shortcuts/4/gos.jpg" class="services-item-image rounded-5" style="width:100px; height:100px; margin-bottom:20px;">
+        <h4 class="title mt-2">Организация и проведения государственных закупов</h4>
+        <div class="text-muted mt-2">Организация и проведение государственных закупок включает в себя планирование, объявление, оценку предложений и заключение контрактов с целью эффективного использования государственных средств и обеспечения прозрачности.</div>
+        </a>
+        </div><div class="d-flex align-items-stretch mb-4 mb-lg-4">
+        <a href="video.html" class="icon-box text-dark" data-aos="fade-up" data-aos-delay="100">
+        <img src="uploads/shortcuts/5/video.jpg" class="services-item-image rounded-5" style="width:100px; height:100px; margin-bottom:20px;">
+        <h4 class="title mt-2">Установка и обслуживание систем видеонаблюдения и пожарной системы</h4>
+        <div class="text-muted mt-2">Установка и обслуживание систем видеонаблюдения и пожарной системы обеспечивают безопасность и защиту объектов от несанкционированного доступа и пожаров.</div>
+        </a>
+        </div><div class="d-flex align-items-stretch mb-4 mb-lg-4">
+        <a href="ohrana.html" class="icon-box text-dark" data-aos="fade-up" data-aos-delay="100">
+        <img src="uploads/shortcuts/6/ohrana.jpg" class="services-item-image rounded-5" style="width:100px; height:100px; margin-bottom:20px;">
+        <h4 class="title mt-2">Охранное агентство</h4>
+        <div class="text-muted mt-2">Охранное агентство предоставляет профессиональные услуги по защите людей и имущества, обеспечивая безопасность и предотвращение угроз.</div>
+        </a>
+        </div><div class="d-flex align-items-stretch mb-4 mb-lg-4">
+        <a href="uchebny.html" class="icon-box text-dark" data-aos="fade-up" data-aos-delay="100">
+        <img src="uploads/shortcuts/7/ucheb.jpg" class="services-item-image rounded-5" style="width:100px; height:100px; margin-bottom:20px;">
+        <h4 class="title mt-2">Учебный центр</h4>
+        <div class="text-muted mt-2">Учебный центр предлагает широкий спектр образовательных программ и курсов, направленных на развитие знаний и навыков в различных областях.</div>
+        </a>
+        </div><div class="d-flex align-items-stretch mb-4 mb-lg-4">
+        <a href="shvei.html" class="icon-box text-dark" data-aos="fade-up" data-aos-delay="100">
+        <img src="uploads/shortcuts/11/shop.png" class="services-item-image rounded-5" style="width:100px; height:100px; margin-bottom:20px;">
+        <h4 class="title mt-2">Ателье</h4>
+        <div class="text-muted mt-2">Ателье предоставляет услуги индивидуального пошива и ремонта одежды, обеспечивая высокое качество и идеальную посадку каждой вещи.</div>
+        </a>
+        </div><div class="d-flex align-items-stretch mb-4 mb-lg-4">
+        <a href="tvorchesky.html" class="icon-box text-dark" data-aos="fade-up" data-aos-delay="100">
+        <img src="uploads/shortcuts/8/tvor.jpg" class="services-item-image rounded-5" style="width:100px; height:100px; margin-bottom:20px;">
+        <h4 class="title mt-2">Детский творческий центр</h4>
+        <div class="text-muted mt-2">Детский творческий центр предлагает разнообразные программы и мастер-классы для развития креативных и художественных способностей детей.</div>
+        </a>
+        </div><div class="d-flex align-items-stretch mb-4 mb-lg-4">
+        <a href="programma.html" class="icon-box text-dark" data-aos="fade-up" data-aos-delay="100">
+        <img src="uploads/shortcuts/9/prog.jpg" class="services-item-image rounded-5" style="width:100px; height:100px; margin-bottom:20px;">
+        <h4 class="title mt-2">Поставка оборудования и лицензионного программного обеспечения</h4>
+        <div class="text-muted mt-2">Поставка оборудования и лицензионного программного обеспечения: Комплексные решения для снабжения современных и высококачественных устройств и программных продуктов с лицензиями, обеспечивающих надежную и эффективную работу вашего бизнеса.</div>
+        </a>
+        </div><div class="d-flex align-items-stretch mb-4 mb-lg-4">
+        <a href="local.html" class="icon-box text-dark" data-aos="fade-up" data-aos-delay="100">
+        <img src="uploads/shortcuts/10/ethernet (1).png" class="services-item-image rounded-5" style="width:100px; height:100px; margin-bottom:20px;">
+        <h4 class="title mt-2">Установка локальной сети</h4>
+        <div class="text-muted mt-2">Высококвалифицированные специалисты нашей компании имеют многолетний опыт в проектировании и монтаже локальных сетей. Если Вы желаете осуществить монтаж, внедрение новой сетевой инфраструктуры в Вашем офисе, мы займемся проектированием локальной сети.</div>
+        </a>
+        </div>
+        </div>
+                </div>
+            </section>
+            
+
+            
+
+            
+            <section id="faq" class="faq">
+                <div class="container">
+                    <div class="section-title" data-aos="fade-up">
+                        <h2>Частые вопросы</h2>
+                    </div>
+                    <div class="row faq-item d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
+                        <div class="col-lg-5">
+                            <i class="fa fa-question-circle-o" aria-hidden="true"></i>
+                            <h4>1.Какие основные ценности и миссия вашей компании?</h4>
+                        </div>
+                        <div class="col-lg-7">
+                            <p>Обеспечить клиентов инновационными и надежными решениями, используя передовые технологии и высокий уровень профессионализма для улучшения их бизнеса и повседневной жизни.
+                                Основные ценности:
+                                Мы ставим потребности наших клиентов на первое место, предлагая индивидуальные решения и высокий уровень сервиса.
+                                Мы стремимся к постоянному внедрению современных технологий и решений, чтобы быть впереди в нашей отрасли.
+                                Гарантируем высокое качество наших продуктов и услуг, обеспечивая стабильность и долгосрочное сотрудничество.
+                                Наши сотрудники - это высококвалифицированные специалисты с большим опытом, которые постоянно развиваются и совершенствуют свои навыки.
+                                Заботимся о своих сотрудниках, клиентах и обществе, соблюдая высокие стандарты деловой этики.</p>
+                        </div>
+                    </div>
+                    <div class="row faq-item d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
+                        <div class="col-lg-5">
+                            <i class="fa fa-question-circle-o" aria-hidden="true"></i>
+                            <h4>2.Какие услуги предоставляет ТОО Сункар Inter Link?</h4>
+                        </div>
+                        <div class="col-lg-7">
+                            <p>Наши Услуги: ГОСТЕСТ, Организация и проведения государственных закупов, Установка и обслуживание систем видеонаблюдения и пожарной системы,
+                                Охранное агентство, Учебный центр, Ателье, Детский творческий центр, Поставка оборудования и лицензионного программного обеспечения, Установка локальной сети</p>
+                        </div>
+                    </div>
+                    <div class="row faq-item d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
+                        <div class="col-lg-5">
+                            <i class="fa fa-question-circle-o" aria-hidden="true"></i>
+                            <h4>3.Где находится ваш офис?</h4>
+                        </div>
+                        <div class="col-lg-7">
+                            <p>Наш офис находится в городе Талдыкорган, в бизнес центре Жигер, ул.Акын Сара 137, 4 этаж, 408 кб</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!--<section id="videos" class="videos">
+    <div class="container">
+        <div class="section-title" data-aos="fade-up">
+            <h2>Videos</h2>
+        </div>
+        <div class="row">
+            <div class="col-lg-12 col-md-12" data-aos="fade-up" data-aos-delay="100">
+                <div class="videos-text text-center">
+                    Watch our helpful videos from professionals and help your equipment last longer!
+					<div class="row mt-4 row-cols-3 row-cols-sm-3 row-cols-lg-6 align-items-stretch">
+						<div class="col">
+							<img src="includes/template/assets/img/blank_thumb.png" class="img-fluid img-thumbnail mb-3">
+						</div>
+						<div class="col">
+							<img src="includes/template/assets/img/blank_thumb.png" class="img-fluid img-thumbnail mb-3">
+						</div>
+						<div class="col">
+							<img src="includes/template/assets/img/blank_thumb.png" class="img-fluid img-thumbnail mb-3">
+						</div>
+						<div class="col">
+							<img src="includes/template/assets/img/blank_thumb.png" class="img-fluid img-thumbnail mb-3">
+						</div>
+						<div class="col">
+							<img src="includes/template/assets/img/blank_thumb.png" class="img-fluid img-thumbnail mb-3">
+						</div>
+						<div class="col">
+							<img src="includes/template/assets/img/blank_thumb.png" class="img-fluid img-thumbnail mb-3">
+						</div>
+                	</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+            <section>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 aos-init aos-animate" data-aos="fade-up" data-aos-delay="100">
+                            <div class="text-center">
+                                <img src="uploads/book1.jpg" class="img-thumbnail" width="200">
+                                <img src="uploads/book2.jpg" class="img-thumbnail" width="200">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>-->
+            
+              
+              
+            
+            <section id="partners" class="partners">
+                <div class="container">
+                    <div class="section-title" data-aos="fade-up">
+                        <h2>Партнеры</h2>
+                    </div>
+            
+                    <div class="owl-carousel partners-carousel" data-aos="fade-up" data-aos-delay="200">
+                        <div class="partner-item">
+                            <img src="img/1 - gilat.jpg" class="partner-img" alt="Partner 1">
+                        </div>
+                        <div class="partner-item">
+                            <img src="img/10 - Yealink.jpg" class="partner-img" alt="Partner 2">
+                        </div>
+                        <div class="partner-item">
+                            <img src="img/11 - mitel.jpg" class="partner-img" alt="Partner 3">
+                        </div>
+                        <div class="partner-item">
+                            <img src="img/12 - PaloAltoNetwork.jpg" class="partner-img" alt="Partner 4">
+                        </div>
+                        <div class="partner-item">
+                            <img src="img/13 - nec.jpg" class="partner-img" alt="Partner 5">
+                        </div>
+                        <div class="partner-item">
+                            <img src="img/14 - IBM_logo.jpg" class="partner-img" alt="Partner 6">
+                        </div>
+                        <div class="partner-item">
+                            <img src="img/4 - C-COM Satellite Systems Inc.jpg" class="partner-img" alt="Partner 7">
+                        </div>
+                        <div class="partner-item">
+                            <img src="img/6 - infinet.jpg" class="partner-img" alt="Partner 8">
+                        </div>
+                        <div class="partner-item">
+                            <img src="img/7 - orion.jpg" class="partner-img" alt="Partner 9">
+                        </div>
+                        <div class="partner-item">
+                            <img src="img/8 - cobham.jpg" class="partner-img" alt="Partner 10">
+                        </div>
+                        <div class="partner-item">
+                            <img src="img/9 - рцкс.jpg" class="partner-img" alt="Partner 11">
+                        </div>
+                        <div class="partner-item">
+                            <img src="img/Fortinet_logo.jpg" class="partner-img" alt="Partner 12">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+<script>
+    $(document).ready(function(){
+        $('.certificates-carousel').owlCarousel({
+            loop: true,
+            margin: 10,
+            nav: true,
+            responsive: {
+                0: {
+                    items: 1
+                },
+                600: {
+                    items: 2
+                },
+                1000: {
+                    items: 4
+                }
+            }
+        });
+
+        $('.partners-carousel').owlCarousel({
+            loop: true,
+            margin: 10,
+            nav: true,
+            responsive: {
+                0: {
+                    items: 1
+                },
+                600: {
+                    items: 2
+                },
+                1000: {
+                    items: 4
+                }
+            }
+        });
+    });
+</script>
+
+<section id="contact" class="contact">
+    <div class="container">
+        <div class="section-title" data-aos="fade-up">
+            <h2>Контакты</h2>
+        </div>
+        <div class="row">
+            <div class="col-lg-12 col-md-12" data-aos="fade-up" data-aos-delay="100">
+                <div class="contact-map">
+                    <!-- -->
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <!-- Блок с фото -->
+            <div class="col-lg-3 col-md-12" data-aos="fade-up" data-aos-delay="100">
+                <div class="contact-photo">
+                    <img src="uploads/shortcuts/1/i.webp" alt="Фото" style="width: 100%;">
+                </div>
+            </div>
+        
+            <!-- Блок с контактами -->
+            <div class="col-lg-9 col-md-12" data-aos="fade-up" data-aos-delay="200">
+                <div class="contact-about mb-5">
+                    <p class="lead text-justify mb-5">У Вас есть вопросы? Задайте их нашим сотрудникам прямо сейчас!</p>
+                </div>
+                <div class="success form-control" style="display: none;">
+                    <h4 class="text-center">
+                        Your message has been sent successfully!
+                        <br><br>
+                        <i class="fa fa-2x fa-smile-o" aria-hidden="true"></i>
+                    </h4>
+                </div>
+                <div class="error alert alert-danger form-control" role="alert" style="display: none;">
+                    Internal server error please try again later!
+                </div>
+                <form>
+                    <div class="mb-3">
+                        <input type="text" name="name" class="form-control" placeholder="Имя" required>
+                    </div>
+                    <div class="mb-3">
+                        <input type="email" name="email" class="form-control" placeholder="E-mail" required>
+                    </div>
+                    <div class="mb-3">
+                        <input type="tel" name="phone" class="form-control" placeholder="Телефон" required>
+                    </div>
+                    <div class="mb-3">
+                        <textarea rows="5" name="message" class="form-control" placeholder="Сообщение" required></textarea>
+                    </div>
+                    <div class="text-center">
+                        <button type="submit" class="btn-send">Отправить</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+        </main>
+        <footer id="footer">
+    <div class="container">
+        <div class="row d-flex align-items-center">
+            <!--<div class="col-lg-6 text-lg-start text-center">-->
+            <div class="col text-center">
+                <div class="copyright">
+                    &copy; 2024<!-- -2025--> <a href="https://sunkar.kz/">sunkar.kz</a>
+                </div>
+                <div class="credits">
+                    
+                </div>
+            </div>
+            <!--{<div class="col-lg-6">
+                <nav class="footer-links text-lg-end text-center pt-2 pt-lg-0">
+                    WHATSAPP}{TELEGRAM}{TWITTER}{INSTAGRAM}{YOUTUBE}{FACEBOOK}{VK}{OK}
+                </nav>
+            </div>-->
+        </div>
+    </div>
+</footer>
+        <a href="tel:+77054004433">
+            <div id="call" class="d-lg-none">
+                <div id="call-icon"></div>
+                <div id="call-wave"></div>
+            </div>
+        </a>
+        <a href="https://wa.me/+77054004433">
+            <div id="whatsapp" class="mt-lg-none">
+                <div id="whatsapp-icon"><i class="fa fa-whatsapp fa-3x" aria-hidden="true"></i></div>
+                <div id="whatsapp-wave"></div>
+            </div>
+        </a>
+        <a href="#" title="Top" class="back-to-top"><i class="fa fa-chevron-up" aria-hidden="true"></i></a>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="includes/assets/js/bootstrap.bundle.min.js"></script>
+        <!-- Vendor JS Files -->
+        <script src="includes/assets/js/jquery.easing.min.js"></script>
+        <script src="includes/assets/js/jquery.waypoints.min.js"></script>
+        <script src="includes/assets/js/validate.js"></script>
+        <script src="includes/assets/js/counterup.min.js"></script>
+        <script src="includes/assets/js/owl.carousel.min.js"></script>
+        <script src="includes/assets/js/isotope.pkgd.min.js"></script>
+        <script src="includes/assets/js/venobox.min.js"></script>
+        <script src="includes/assets/js/aos.min.js"></script>
+        <!-- Template Main JS File -->
+        <script src="includes/assets/js/main.js"></script>
+        <!-- Custom JavaScript -->
+        <script>
+            $(document).ready(function() {
+                $('a[href^="//#"]').each(function() {
+                    var oldUrl = $(this).attr('href');
+                    var newUrl = oldUrl.replace('//#', 'javascript:void(0);');
+                    $(this).attr('href', newUrl);
+                });
+
+                var action = $('.nav-menu').find('.nav-item:nth-child(2) a').attr('href');
+                $('.btn-welcome').attr('href', action);
+
+                $('.phone a').text(function(i, text) {
+                    text = text.replace(/(\d)(\d\d\d)(\d\d\d)(\d\d\d\d)/, '$1 $2-$3-$4');
+                    return text;
+                });
+
+                $('p.lead').each(function(index) {
+                    if ($(this).text() == '' ) $(this).hide();
+                });
+            });
+        </script>
+        
+    </body>
+</html>
